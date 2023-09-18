@@ -209,13 +209,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
                             let image = new Image();
-                                image.src = "zdjęcia/ok.png";
+                                image.src = "zdjecia/ok.png";
 
                             let image2 = new Image();
-                            image2.src = "zdjęcia/elsewhere.png";
+                            image2.src = "zdjecia/elsewhere.png";
 
                             let image3 = new Image();
-                            image3.src = "zdjęcia/none.png";
+                            image3.src = "zdjecia/none.png";
 
                                 let initialStartX2 = 80;
                                 let initialStartX3 = 80;
