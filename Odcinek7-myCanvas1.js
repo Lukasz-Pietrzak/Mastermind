@@ -3,11 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!DOMContentLoaded) {
         DOMContentLoaded = true;
 
-
-        //This is my second modification
-
-        //This is my modificaction and problem
-
         //contents - CTRL + F
         // 1. Function to draw the arrow
 
@@ -137,8 +132,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         var color = ["red", "green", "blue", "saddlebrown", "yellow", "fuchsia", "grey"];
 
-
-        //next modification here
         let brameczka = 0;
 
         let algorithmColor = [];
