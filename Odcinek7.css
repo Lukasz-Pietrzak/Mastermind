@@ -1,0 +1,103 @@
+
+body{
+    background-color: #171617;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#container{
+    text-align: center;
+}
+
+
+#myCanvas1-div {
+    width: 60%;
+    height: 28vw;
+    margin: 3px auto; /* Center the canvas horizontally and add some spacing */
+    border: 2px solid orangered; /* Add a border for visibility */
+    display: block;
+    background-color: black;
+}
+
+
+@media screen and (max-width: 1152px) {
+
+    #myCanvas1-div {
+        width: 70%;
+        height: 35vw;
+        border: 2px solid orangered; /* Add a border for visibility */
+        display: block;
+        background-color: black;
+        margin-right: calc(-1 * (86vw - 100%)); /* Dodanie marginesu kompensacyjnego */
+    }
+
+}
+
+
+#tekst-content {
+    color: gold;
+    font-size: 2vw;
+    margin-top: 30px;
+}
+
+
+h1 {
+    font-size: 3vw;
+    margin-top: 10px;
+    color: gold;
+    user-select: none;
+}
+
+/* For screens with a maximum width of 600px */
+@media screen and (max-height: 600px) {
+    #myCanvas1-div {
+        width: 55%; /* Adjust the width for smaller screens */
+        height: 26vw; /* Adjust the height proportionally for smaller screens */
+    }
+
+    #tekst-content {
+        font-size: 20px;
+    }
+
+
+    h1 {
+        font-size: 35px;
+    }
+}
+
+
+#myCanvas1{
+    margin: 25px auto;
+
+
+/*color: grey;*/
+}
+
+
+#tekst{
+    user-select: none;
+}
+
+#Testowo{
+    color: white;
+    font-size: 50px;
+}
+
+#myCanvas2{
+}
+
+#tekst2{
+    color: white;
+    font-size: 2.3vw;
+    line-height: 100px;
+}
+
+#Jeszcze-raz:hover{
+    cursor: pointer;
+    color: gold;
+}
+
+
+.disabled {
+    /*pointer-events: none;*/
+}
