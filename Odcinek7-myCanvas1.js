@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!DOMContentLoaded) {
         DOMContentLoaded = true;
 
+        //This is my modificaction
         //contents - CTRL + F
         // 1. Function to draw the arrow
 
@@ -102,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 })
                 context.fillText(text, startX, startY);
 
-                //This is my modificaction
                 context.fillStyle = "gold";
                 const text2 = "RUNDA";
                 context.font = "20px Arial";
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var color = ["red", "green", "blue", "saddlebrown", "yellow", "fuchsia", "grey"];
 
 
-        //next modification
+        //next modification here
         let brameczka = 0;
 
         let algorithmColor = [];
