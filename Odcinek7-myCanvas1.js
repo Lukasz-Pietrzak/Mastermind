@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!DOMContentLoaded) {
         DOMContentLoaded = true;
 
-        //This is my modificaction
+        //This is my second modification
         //contents - CTRL + F
         // 1. Function to draw the arrow
 
