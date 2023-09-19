@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var canvasHeight = canvas2.height;
 
+    //Resizing rectangles for smaller resolution
         if (window.innerWidth >= 1400) {
             rectWidth = 100;
             rectHeight = 100;
@@ -48,26 +49,33 @@ document.addEventListener("DOMContentLoaded", function () {
     var rectangles = [];
 
 
+    //Reset game if it's won
     window.addEventListener("message", function (event) {
         if (event.data.action === "gameWin") {
             console.log("Game Win!");
             document.getElementById("tekst2").innerHTML = "Wygrałeś! <span id='Jeszcze-raz' onclick='location.reload()'>Jeszcze raz?</span>"
+
+
+            //Clear rectangles
             context2.clearRect(0, 0, 1110, 120);
+
+            //Turn off pointer
             let disabledElements = document.querySelectorAll(".disabled");
 
-// Iteruj przez elementy i ustaw regułę "pointer-events" na "none"
+// Iterate through the elements and set the "pointer-events" rule to "none"
             for (let i = 0; i < disabledElements.length; i++) {
                 disabledElements[i].style.pointerEvents = "none";
             }
         }
     });
 
-    // onclick='location.reload()'
 
     // 2. Loop to draw rectangles and store positions
     for (let i = 0; i < color.length + 1; i++) {
 
         context2.fillStyle = color[i];
+
+        //Spaces between rectangles for smaller resolution
         if (window.innerWidth >= 1400) {
             startX = startX + 120;
         }else if (window.innerWidth < 1400 && window.innerHeight + 139 > 600) {
@@ -77,7 +85,10 @@ document.addEventListener("DOMContentLoaded", function () {
             startX = startX + 70;
         }
 
+        //Drawing rectangles
         context2.fillRect(startX, startY, rectWidth, rectHeight);
+
+        //Saving rectangles positions for pointer
         rectangles.push({x: startX, y: startY, width: rectWidth, height: rectHeight});
 
         //2.1 - Creating the "popraw" rectangle resposible for restoring previous clicked rectangle
@@ -95,6 +106,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const text = "popraw"; // The text to display
             const textX = startX + rectWidth / 2; // X coordinate for text centering
             const textY = startY + rectHeight / 2; // Y coordinate for text centering
+
+            //Setting the proper font size for resolution
             if (window.innerHeight <= 1280 && window.innerHeight + 139 === 600){
                 context2.font = "12px Arial"; // Set the font size and type
             }
@@ -145,13 +158,13 @@ document.addEventListener("DOMContentLoaded", function () {
             const rect = rectangles[i];
             if (clickX >= rect.x && clickX <= rect.x + rectWidth &&
                 clickY >= rect.y && clickY <= rect.y + rectHeight) {
-                const selectedColor = color[i]; // Assuming colors is an array of color values
+                const selectedColor = color[i];
                 context2.fillStyle = selectedColor;
                 // Send message with color and position
                 if (i < 7 && positionX < 60 + 150 * 5) {
                     positionX = positionX + 150;
                     window.addEventListener("message", function (event) {
-                        if (event.data.action === "brameczka5"){
+                        if (event.data.action === "counter5"){
                             positionX = 60;
                         }
                     })
