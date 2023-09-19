@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // 4. Function getAlgorithmColor
 
-        // 5. Window addEventListener from Odcinek7-myCanvas2.js connecting click-event rectangles from
+        // 5. Window addEventListener from myCanvas2.js connecting click-event rectangles from
         // that file with the
         // rectangles from this file
 
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let blueFace = 0;
         let redFace = 0;
 
-        // 5. Window addEventListener from Odcinek7-myCanvas2.js connecting click-event rectangles from Odcinek7-myCanvas2.js with the
+        // 5. Window addEventListener from myCanvas2.js connecting click-event rectangles from myCanvas2.js with the
         //rectangles from this file
         window.addEventListener("message", function (event) {
             if (event.data.action === "paintRectangle") {
